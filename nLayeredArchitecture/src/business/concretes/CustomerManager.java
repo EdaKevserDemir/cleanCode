@@ -1,17 +1,16 @@
 package business.concretes;
 
 import business.abstracts.CustomerService;
-import business.abstracts.IPersonService;
+import business.abstracts.PersonService;
 import dataAccess.abstracts.ICustomerDal;
-import dataAccess.concretes.EfCustomerDal;
 import entities.concretes.Customer;
 
 public class CustomerManager implements CustomerService {
 
     ICustomerDal customerDal;
-    IPersonService personService;
+    PersonService personService;
 
-    public CustomerManager(ICustomerDal customerDal,IPersonService personService) {
+    public CustomerManager(ICustomerDal customerDal, PersonService personService) {
         this.customerDal = customerDal;
         this.personService=personService;
     }
