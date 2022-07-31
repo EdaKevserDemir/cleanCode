@@ -21,7 +21,6 @@ public class Main {
         Employee employee=new Employee(1,"eda","demir","123",1993,10000);
         List<Employee>employees=new ArrayList<>();
         employees.add(employee);
-
         EmployeeManager employeeManager=new EmployeeManager(new EfEmployeeDal()) {
             @Override
             public List<Employee> getAll() {
