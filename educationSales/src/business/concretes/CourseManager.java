@@ -11,7 +11,6 @@ import java.util.List;
 public class CourseManager implements CourseService {
     ICourseDal courseDal;
     PriceService priceService;
-    List<Course>courses=new ArrayList<>();
 
     public CourseManager(ICourseDal courseDal,PriceService priceService) {
         this.courseDal = courseDal;
@@ -20,13 +19,15 @@ public class CourseManager implements CourseService {
 
     @Override
     public void add(Course course) {
-     courseDal.add(course);
+
+        courseDal.add(course);
     }
 
     @Override
     public List<Course> getAll() {
-        List<Course> courses=courseDal.getAll();
+
+        List<Course>courses=courseDal.getAll();
         priceService.updatePrice(courses);
-        return courseDal.getAll();
+        return courses;
     }
 }

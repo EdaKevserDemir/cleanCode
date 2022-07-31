@@ -16,9 +16,8 @@ public class Main {
          courseService.add(course2);
 
         for (Course course:courseService.getAll()){
-            System.out.println(course.price+course.name);
+            System.out.println(course.price+" "+course.name);
         }
-
 
     }
 }

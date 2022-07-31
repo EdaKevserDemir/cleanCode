@@ -11,6 +11,7 @@ List<Course>courses=new ArrayList<>();
 
     @Override
     public void add(Course course) {
+        courses.add(course);
         System.out.println("Course added");
     }
 
